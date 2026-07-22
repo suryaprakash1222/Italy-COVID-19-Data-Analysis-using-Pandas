@@ -1,131 +1,111 @@
 Italy COVID-19 Data Analysis using Pandas
-Project Overview
-This repository showcases a hands-on data analysis project built with Python, Pandas, and Matplotlib using Italy's day-wise COVID-19 dataset.
+<p align="center">
+<img src="https://img.shields.io/badge/Python-Pandas-blue?style=for-the-badge" alt="Python Pandas badge">
+<img src="https://img.shields.io/badge/Analysis-COVID--19-green?style=for-the-badge" alt="COVID-19 analysis badge">
+<img src="https://img.shields.io/badge/Portfolio-GitHub-black?style=for-the-badge" alt="GitHub portfolio badge">
+</p>
 
-The project demonstrates how Pandas can be used for real-world data analysis tasks such as data loading, inspection, cleaning, transformation, aggregation, merging, and visualization.
+Project Snapshot
+A hands-on data analysis project built with Python, Pandas, and Matplotlib using Italy’s day-wise COVID-19 dataset. The project demonstrates practical data handling, cleaning, feature engineering, aggregation, dataset merging, and visualization.
 
-Objective
-The goal of this project is to demonstrate practical proficiency in Pandas by working on a real dataset and performing a complete analysis workflow from raw data to analytical outputs.
+What This Project Shows
+Data acquisition from online sources.
 
-This project reflects the kind of work expected in data analyst and business analyst roles where raw data must be cleaned, explored, transformed, and converted into useful insights.
+Data inspection and exploration with Pandas.
+
+Cleaning invalid and anomalous values.
+
+Date handling and time-based feature extraction.
+
+Group-wise and month-wise analysis.
+
+Merging multiple datasets.
+
+Normalized metrics for population-based comparison.
+
+Visual reporting using Matplotlib.
 
 Tools and Libraries
 Tool / Library	Purpose
 Python	Core programming language
 Pandas	Data manipulation and analysis
-Matplotlib	Data visualization
+Matplotlib	Charts and visualizations
 urllib.request	Downloading datasets from URLs
-Dataset Used
+Dataset
 This project uses:
 
-Italy COVID-19 day-wise data
+Italy COVID-19 day-wise data.
 
-Location and population metadata for merge operations
+Location and population metadata for merging and per-capita calculations.
 
-The datasets are downloaded directly from online sources inside the Python script.
+The data is downloaded directly from online sources inside the Python script, making the workflow reproducible.
 
-Project Workflow
-1. Data Acquisition
-Downloaded CSV data from public URLs using urllib.request
+Workflow
+Data Acquisition
+Downloaded CSV files using urllib.request.
 
-Saved the files locally for analysis
+Saved files locally for analysis.
 
-Loaded the files into Pandas DataFrames
+Loaded the files into Pandas DataFrames.
 
-2. Data Exploration
-Inspected dataset structure using:
+Data Exploration
+Used info() to inspect data types and missing values.
 
-info()
+Used describe() to summarize numeric columns.
 
-describe()
+Checked the dataset size using shape.
 
-shape
+Reviewed columns using columns.
 
-columns
+Inspected sample records using head(), tail(), and sample().
 
-Reviewed sample rows using:
+Data Cleaning
+Identified invalid negative values in daily case records.
 
-head()
+Corrected anomalous values using neighboring rows.
 
-tail()
+Converted the date column into datetime format.
 
-sample()
+Feature Engineering
+Extracted year, month, day, weekday, and day name from the date column.
 
-Accessed specific records using:
+Calculated positivity-related metrics.
 
-direct indexing
+Computed cumulative totals for cases, tests, and deaths.
 
-.loc[]
+Analysis Performed
+Calculated total COVID cases and deaths.
 
-.at[]
+Calculated overall death rate and positivity rate.
 
-3. Data Cleaning
-Identified invalid negative values in daily case records
+Filtered days with high case counts.
 
-Corrected anomalous values using neighboring rows
+Filtered records with above-average positivity rate.
 
-Converted the date column into datetime format
+Compared Sunday averages with overall averages.
 
-4. Feature Engineering
-Created new date-based columns:
+Performed month-wise totals and averages.
 
-year
+Data Merging
+Loaded a second dataset containing location and population data.
 
-month
+Renamed and cleaned columns for merge compatibility.
 
-day
+Merged datasets using country as the common key.
 
-weekday
+Normalized Metrics
+Calculated new cases per million population.
 
-day name
+Calculated new deaths per ten million population.
 
-Calculated positivity-related metrics
+Output and Visualization
+Created a final processed output DataFrame.
 
-Computed cumulative totals for:
+Exported the result to CSV.
 
-total cases
+Saved charts using Matplotlib.
 
-total tests
-
-total deaths
-
-5. Analysis Performed
-Calculated total COVID cases and deaths
-
-Calculated overall death rate
-
-Calculated overall positivity rate
-
-Identified days with high COVID case counts
-
-Filtered records with above-average positivity rate
-
-Compared Sunday average cases with overall average cases
-
-Performed month-wise totals and average analysis
-
-6. Data Merging
-Loaded a second dataset containing location and population data
-
-Renamed and cleaned columns for merge compatibility
-
-Performed DataFrame merge operation using country as the common key
-
-7. Normalized Metrics
-Calculated new cases per million population
-
-Calculated new deaths per ten million population
-
-8. Output and Visualization
-Created a final processed output DataFrame
-
-Exported the result to CSV
-
-Built and saved charts using Matplotlib
-
-Pandas Concepts Demonstrated
-This project includes practical use of the following Pandas operations:
-
+Pandas Skills Demonstrated
 pd.read_csv()
 
 DataFrame.info()
@@ -173,42 +153,27 @@ print(monthly_summary)
 Visual Outputs
 The project includes charts such as:
 
-Daily new cases trend
+Daily new cases trend.
 
-New cases vs new deaths comparison plot
+New cases vs new deaths comparison.
 
-Monthly stacked bar chart for cases and deaths
-
-Business and Analytical Value
-This project demonstrates the ability to:
-
-Work with external real-world datasets
-
-Detect and handle data quality issues
-
-Engineer meaningful analytical features
-
-Combine datasets for richer analysis
-
-Build reporting-oriented outputs using Python
-
-Use Pandas beyond basic practice problems
-
-Repository Contents
-Pandas_Handbook_Italy_COVID_Analysis.ipynb — personal learning handbook for code revision
-
-Python project code for COVID-19 analysis
-
-Exported CSV output
-
-Saved visualizations
-
-README.md — project overview for GitHub portfolio
+Monthly stacked bar chart for cases and deaths.
 
 Why This Project Matters
-This repository is designed to function as a portfolio project that demonstrates practical Pandas knowledge, structured analytical thinking, and hands-on data analysis workflow.
+This repository is designed as a portfolio project to show practical Pandas knowledge, structured analytical thinking, and hands-on data analysis workflow.
 
-It highlights not just syntax knowledge, but the ability to work through a complete mini-project from raw dataset to final output.
+It highlights the ability to work through a complete mini-project from raw dataset to final output.
+
+Repository Contents
+Pandas_Handbook_Italy_COVID_Analysis.ipynb — personal learning handbook for code revision.
+
+Python project code for Italy COVID-19 analysis.
+
+Exported CSV output.
+
+Saved visualizations.
+
+README.md — portfolio overview for GitHub.
 
 Author
 Surya Prakash
